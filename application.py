@@ -102,7 +102,7 @@ html.Div([
     dash.dependencies.Output('3dScatter', 'figure'))
 
 def update_3dScatter():
-    data = pd.read_excel(r'C:\Users\Public\Pythonfiles\3dScatter.xlsx')
+    data = pd.read_csv(r'3dScatter.csv')
     data = data.loc[data['Year'] == 2010]
     print(data.head())
     x, y, z = np.random.multivariate_normal(np.array([0, 0, 0]), np.eye(3), 400).transpose()
