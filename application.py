@@ -257,4 +257,4 @@ def update_time_series(hoverData):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    application.run_server(debug=True)
