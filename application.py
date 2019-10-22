@@ -59,9 +59,6 @@ layout = go.Layout(title='Exploring Human development using 3D scatterplots',
                                title='Income'))
                        )
 
-
-
-
 styles = {
     'pre': {
         'border': 'thin lightgrey solid',
@@ -94,8 +91,6 @@ html.Div([
 html.Div([
         dcc.Graph(id='time-series-Education'),
     ], style={'display': 'inline-block', 'width': '25%','float':'left'}),
-
-
 ])
 
 @app.callback(
@@ -155,7 +150,6 @@ update_3dScatter()
 @app.callback(
     dash.dependencies.Output('time-series-LifeExp','figure'),
     [dash.dependencies.Input('3dScatter','hoverData')])
-
 def update_time_series(hoverData):
     print('DF Heads')
     years=['1990','1995','2000','2005','2010','2015']
@@ -189,7 +183,6 @@ def update_time_series(hoverData):
 @app.callback(
     dash.dependencies.Output('time-series-Income','figure'),
     [dash.dependencies.Input('3dScatter','hoverData')])
-
 def update_time_series(hoverData):
     print('DF Heads')
     years=['1990','1995','2000','2005','2010','2015']
@@ -223,7 +216,6 @@ def update_time_series(hoverData):
 @app.callback(
     dash.dependencies.Output('time-series-Education','figure'),
     [dash.dependencies.Input('3dScatter','hoverData')])
-
 def update_time_series(hoverData):
     print('DF Heads')
     years=['1990','1995','2000','2005','2010','2015']
@@ -257,4 +249,5 @@ def update_time_series(hoverData):
 
 
 if __name__ == '__main__':
-    application.run_server(debug=True)
+    # application.run_server(debug=True)
+    application.run(debug=True)
