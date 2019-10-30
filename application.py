@@ -114,7 +114,7 @@ def update_3dScatter():
         mode='markers+text',
         textposition='top center',
         textfont=dict(
-            size=10
+            size=9
         ),
         marker=dict(
             size=8,
